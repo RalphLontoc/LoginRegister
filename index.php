@@ -9,10 +9,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-<!-- This is an update -->
- <h1>Hello</h1>
- <!-- Hanggang dito -->
   <main>
     <section class="card login" aria-label="Login form">
       <div class="card-content">
