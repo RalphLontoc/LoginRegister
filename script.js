@@ -1,69 +1,23 @@
- 
-    const loginCard = document.querySelector('.card.login');
-    const signupCard = document.querySelector('.card.create-account');
-    const linkSignup = document.getElementById('link-signup');
-    const linkSignin = document.getElementById('link-signin');
-    const backToLogin = document.getElementById('back-to-login');
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-    function showLogin() {
-      signupCard.hidden = true;
-      loginCard.hidden = false;
-      window.location.hash = '#login';
-    }
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
 
-    function showSignUp() {
-      loginCard.hidden = true;
-      signupCard.hidden = false;
-      window.location.hash = '#create-account';
-    }
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
 
-    // linkSignup.addEventListener('click', (e) => {
-    //   e.preventDefault();
-    //   showSignUp();
-    // });
-
-    // linkSignin.addEventListener('click', (e) => {
-    //   e.preventDefault();
-    //   showLogin();
-    // });
+  
+    // document.getElementById('login-form').addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     alert('Login submitted');
+    //   });
+    //   document.getElementById('signup-form').addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     alert('Sign up submitted');
+    //   });
 
 
-
-    // On page load, check hash to open correct form
-    window.addEventListener('load', () => {
-      if (window.location.hash === '#create-account') {
-        showSignUp();
-      } else {
-        showLogin();
-      }
-    });
-
-    // Accessibility: Manage keyboard focus on toggles
-    linkSignup.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        showSignUp();
-      }
-    });
-    linkSignin.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        showLogin();
-      }
-    });
-    backToLogin.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        showLogin();
-      }
-    });
-
-    // Placeholder form submissions - prevent default for demonstration
-    document.getElementById('login-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Login submitted');
-    });
-    document.getElementById('signup-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Sign up submitted');
-    });
