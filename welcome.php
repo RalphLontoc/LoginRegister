@@ -19,6 +19,6 @@ if (!isset($_SESSION['user_id'])) {
         <p>You have successfully logged in.</p>
         <a href="logout.php"><button>Logout</button> </a>
     </div>
-
+    
 </body>
 </html>

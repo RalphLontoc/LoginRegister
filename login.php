@@ -1,7 +1,7 @@
 <?php
-// edittt
+
 session_start();
-//sdfdfssfds
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
@@ -28,10 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: welcome.php");
             exit();
         } else {
-            echo "Invalid password.";
+            echo 
+            "<script>alert('Invalid password.');
+            window.location.href = 'index.php'; </script>";
         }
     } else {
-        echo "No user found with that email.";
+        echo 
+           "<script>alert('No user found with that email.');
+            window.location.href = 'index.php'; </script>";
     }
 
     $stmt->close();

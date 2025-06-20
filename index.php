@@ -29,14 +29,14 @@
                 <h1>Sign In</h1>
                 <input type="email" placeholder="Email" required name="email">
                 <input type="password" placeholder="Password" required name="password">
-                <a href="#">Forget Your Password?</a>
+        
                 <button>Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
+                    <h1>Welcome Kabsuhenyo!</h1>
                     <p>Already have an account? Login now</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
